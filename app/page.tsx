@@ -1,101 +1,182 @@
+import { DATA } from "@/data/content";
+import { ArrowDownRight } from "lucide-react";
+import Link from "next/link";
+import * as motion from "framer-motion/client";
+import { MarqueeDemo } from "@/components/values-marquee";
 import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
+        className="flex flex-col py-24 h-full gap-4 md:flex-row"
+      >
+        <div className="md:w-1/2 md:pb-0 pb-6">
+          <h1
+            className="md:text-[72px] text-[52px] tracking-[-4px]  md:tracking-[-5px] font-medium md:leading-[68px] leading-[48px]"
+            style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {DATA.section1[0].heading}
+          </h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        <div className="md:w-1/2 flex flex-col md:justify-between">
+          <p
+            className="text-[14px] md:pb-0  pb-4 tracking-[-1px] font-medium leading-[14px]"
+            style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
+          >
+            <span className="text-bluedeed_fg">BLUEDEED STUDIOS</span>
+            {DATA.section1[1].subheading}
+          </p>
+          <Link
+            href={""}
+            className="flex items-center tracking-[-1px] font-medium text-[14px]"
+          >
+            <ArrowDownRight /> {DATA.section1[2].buttonCTA}
+          </Link>
+        </div>
+      </motion.div>
+      <section>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <MarqueeDemo />
+        </motion.div>
+      </section>
+      <section className="pb-12">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <div className="relative w-full md:h-[800px] h-[300px]">
+            <Image src="/illustration1.svg" fill sizes="100vw" alt={""} />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
+          className="md:items-start items-center flex flex-col w-full"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="py-4">
+            <h2 className="md:text-[52px] text-[32px] tracking-[-2px]  md:tracking-[-3px] font-medium ">
+              Bringing your ideas to life.
+            </h2>
+          </div>
+          <p className="w-full text-left text-[14px] md:pb-0  pb-4  tracking-[-1px] font-medium leading-[14px]">
+            Tools we use:
+          </p>
+          <div className="flex  relative w-[400px] h-[62px]">
+            <Image src="/tools.svg" fill sizes="100vw" alt={""} />
+          </div>
+        </motion.div>
+      </section>
+      <section>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className="flex flex-col py-24 h-full gap-4 md:flex-row"
+        >
+          <div className="md:w-1/2 md:pb-0 pb-6">
+            <h1
+              className="md:text-[52px] text-[32px] tracking-[-3px]  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]"
+              style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
+            >
+              {DATA.whoAreWe[0].heading}
+            </h1>
+          </div>
+
+          <div className="md:w-1/2 flex flex-col md:justify-between">
+            <p
+              className="text-[14px] md:pb-0  pb-4 mb-8"
+              style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
+            >
+              {DATA.whoAreWe[1].subheading}
+            </p>
+            <Link
+              href={""}
+              className="flex items-center tracking-[-1px] font-medium text-[14px]"
+            >
+              <ArrowDownRight /> {DATA.whoAreWe[2].buttonCTA}
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+      <section>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className="flex flex-col h-full gap-4"
+        >
+          <div className="">
+            <h1
+              className="md:text-[52px] text-[32px] tracking-[-3px]  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]"
+              style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
+            >
+              What We Do
+            </h1>
+          </div>
+
+          <div className=" flex flex-col md:justify-between">
+            <Accordion type="single" collapsible>
+              {DATA.whatWeDo.map((service, index) => (
+                <AccordionItem value={`item-${index}`} key={service.item}>
+                  <AccordionTrigger>{service.item}</AccordionTrigger>
+                  <AccordionContent>{service.itemDescription}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </motion.div>
+      </section>
+
+      <section>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className="flex flex-col py-24 h-full gap-4 md:flex-row"
+        >
+          <div className="md:w-1/2 md:pb-0 pb-6">
+            <h1
+              className="md:text-[52px] text-[32px] tracking-[-3px]  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]"
+              style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
+            >
+              {DATA.contactUs[0].heading}
+            </h1>
+          </div>
+
+          <div className="md:w-1/2 flex flex-col md:justify-between">
+            <p
+              className="text-[14px] md:pb-0  pb-4 mb-8"
+              style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
+            >
+              {DATA.contactUs[1].subheading}
+            </p>
+            <Link
+              href={""}
+              className="flex items-center tracking-[-1px] font-medium text-[14px]"
+            >
+              <ArrowDownRight /> {DATA.contactUs[2].buttonCTA}
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+    </main>
   );
 }
