@@ -13,12 +13,6 @@ export default function Header() {
         </Link>
       </div>
       <div className="flex gap-4 w-auto items-center ">
-        <Link
-          className="w-[80px] text-[14px] md:flex hidden"
-          href={DATA.header[1].href}
-        >
-          {DATA.header[1].label}
-        </Link>
         <Link href={DATA.header[2].href}>
           <Button className="text-[14px]">
             {" "}

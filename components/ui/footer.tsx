@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="h-[300px] py-12 mb-24">
+    <footer className="h-[300px] py-12 mt-auto mb-24">
       <div className="w-full h-full">
         <Image alt="" width={80} height={80} src="/bluedeedlogosvg.svg" />
       </div>

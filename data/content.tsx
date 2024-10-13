@@ -2,7 +2,7 @@ export const DATA = {
   navbar: [
     { href: "/", label: "Home" },
     { href: "/our-projects", label: "Projects" },
-    { href: "/about-us", label: "About" },
+    { href: "/about", label: "About" },
     { href: "/contact-us", label: "Contact" },
   ],
   header: [
@@ -27,6 +27,22 @@ export const DATA = {
       icon: "ArrowDownRight",
     },
   ],
+  aboutUs: [
+    {
+      heading:
+        "The only specialists you need when it comes to taking your ideas digital.",
+    },
+
+    {
+      metric: "15",
+    },
+    {
+      metric: "20",
+    },
+    {
+      metric: "5",
+    },
+  ],
   whoAreWe: [
     {
       heading: "Who Are We?",
@@ -38,6 +54,22 @@ export const DATA = {
     },
     {
       buttonCTA: "About Us",
+    },
+    {
+      icon: "ArrowDownRight",
+    },
+  ],
+  weStartedBack: [
+    {
+      heading: "We Started \nBack In 2020",
+    },
+
+    {
+      subheading:
+        "Since our founding in 2020, we’ve been driven by a passion for innovation and a commitment to delivering high-quality solutions. What began as a small team with big ideas has quickly evolved into a thriving company that partners with clients to create impactful digital experiences. Over the years, we’ve grown in expertise and capability, but our core mission remains the same: to help businesses succeed through thoughtful design, cutting-edge technology, and a user-first approach.",
+    },
+    {
+      buttonCTA: "Get In Touch With Us",
     },
     {
       icon: "ArrowDownRight",

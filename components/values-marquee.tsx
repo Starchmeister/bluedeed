@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { Asterisk, MoveRight } from "lucide-react";
 
@@ -42,19 +41,8 @@ const reviews = [
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
 
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
+const ReviewCard = () => {
   return (
     <div className="w-FULL flex items-center gap-2">
       <Asterisk className="text-bluedeed_fg" />{" "}
