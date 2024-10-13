@@ -43,7 +43,7 @@ export default function AboutPage() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
-        className="flex flex-col justify-between w-full  h-[300px] gap-4 md:flex-row"
+        className="flex flex-col justify-between w-full items-center h-[300px] gap-4 md:flex-row"
       >
         <div>
           <AnimatedShinyText>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col py-24 h-full gap-4 md:flex-row"
+            className="flex flex-col py-12 h-full gap-4 md:flex-row"
           >
             <div className="md:w-1/2 md:pb-0 pb-6">
               <h1
@@ -125,10 +125,10 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col py-24 h-full gap-4 md:flex-row"
+            className="flex flex-col py-12 h-full gap-4 md:flex-row"
           >
-            <div className="rounded-[32px] w-1/3 bg-howbg1 p-8">
-              <h2 className="md:text-[52px] text-[32px] tracking-[-3px] text-my_grey  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]">
+            <div className="rounded-[32px] md:w-1/3 bg-howbg1 p-8">
+              <h2 className="md:text-[52px] text-[48px] tracking-[-3px] text-my_grey  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]">
                 01
               </h2>
               <h4 className="text-[32px] tracking-[-2px] font-medium">
@@ -143,8 +143,8 @@ export default function AboutPage() {
                 user journey.
               </p>
             </div>
-            <div className="rounded-[32px] w-1/3 bg-howbg2 p-8">
-              <h2 className="md:text-[52px] text-[32px] tracking-[-3px] text-my_grey  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]">
+            <div className="rounded-[32px] md:w-1/3 bg-howbg2 p-8">
+              <h2 className="md:text-[52px] text-[48px] tracking-[-3px] text-my_grey  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]">
                 02
               </h2>
               <h4 className="text-[32px] tracking-[-2px] font-medium">
@@ -159,8 +159,8 @@ export default function AboutPage() {
                 enhance the user experience.
               </p>
             </div>
-            <div className="rounded-[32px] w-1/3 bg-howbg3 p-8">
-              <h2 className="md:text-[52px] text-[32px] tracking-[-3px] text-my_grey  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]">
+            <div className="rounded-[32px] md:w-1/3 bg-howbg3 p-8">
+              <h2 className="md:text-[52px] text-[48px] tracking-[-3px] text-my_grey  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]">
                 03
               </h2>
               <h4 className="text-[32px] tracking-[-2px] font-medium">
@@ -184,14 +184,14 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col py-24 h-full gap-4 md:flex-row"
+            className="flex flex-col py-12 h-full gap-4 md:flex-row"
           >
             <div className="md:w-1/2 md:pb-0 pb-6">
               <h1
                 className="md:text-[52px] text-[32px] tracking-[-3px]  md:tracking-[-3px] font-medium md:leading-[68px] leading-[48px]"
                 style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
               >
-                {DATA.weStartedBack[0].heading}
+                {DATA.ourMission[0].heading}
               </h1>
             </div>
 
@@ -200,13 +200,13 @@ export default function AboutPage() {
                 className="text-[14px] md:pb-0  pb-4 mb-8"
                 style={{ whiteSpace: "pre-line" }} // This will render \n as line breaks
               >
-                {DATA.weStartedBack[1].subheading}
+                {DATA.ourMission[1].subheading}
               </p>
               <Link
                 href={""}
                 className="flex items-center tracking-[-1px] font-medium text-[14px]"
               >
-                <ArrowDownRight /> {DATA.weStartedBack[2].buttonCTA}
+                <ArrowDownRight /> {DATA.ourMission[2].buttonCTA}
               </Link>
             </div>
           </motion.div>

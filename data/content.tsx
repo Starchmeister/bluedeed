@@ -75,6 +75,22 @@ export const DATA = {
       icon: "ArrowDownRight",
     },
   ],
+  ourMission: [
+    {
+      heading: "Our Mission",
+    },
+
+    {
+      subheading:
+        "Our mission is to empower businesses by delivering innovative digital solutions that are both user-centric and results-driven. We believe in the power of design and technology to solve real-world problems and create lasting value for our clients. By focusing on collaboration, creativity, and continuous improvement, we strive to build products that not only meet the needs of today but are ready to grow and adapt with the challenges of tomorrow. At the core of everything we do is a commitment to excellence and a passion for helping our clients succeed.",
+    },
+    {
+      buttonCTA: "Get In Touch With Us",
+    },
+    {
+      icon: "ArrowDownRight",
+    },
+  ],
   contactUs: [
     {
       heading: "Get in Touch with Us",
