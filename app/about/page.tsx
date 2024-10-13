@@ -43,13 +43,13 @@ export default function AboutPage() {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
-        className="flex flex-col justify-between w-full items-center h-[300px] gap-4 md:flex-row"
+        className="flex flex-col justify-between w-full h-[300px] mb-24 md:mb-8 gap-4 md:flex-row"
       >
         <div>
           <AnimatedShinyText>
             <div className="flex items-center">
               <WordPullUp
-                className="md:text-[92px] font-medium tracking-[-0.02em]  text-[52px]"
+                className="md:text-[92px] font-medium tracking-[-0.02em] text-[52px]"
                 words={"+15"}
               />
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { PropsWithChildren, useRef } from "react";
+import React, { useRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import {
   motion,
@@ -25,7 +25,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max gap-2 rounded-[50px] border  backdrop-blur-md"
+  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max gap-2 rounded-[50px] border backdrop-blur-md"
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -88,23 +88,21 @@ export interface DockIconProps {
 }
 
 const DockIcon = ({
-  size,
   magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
-  mouseX,
+  mouseX: propMouseX,
   className,
   children,
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const defaultMouseX = useMotionValue(Infinity);
+  const mouseX = propMouseX || defaultMouseX;
 
-  const distanceCalc = useTransform(
-    mouseX || useMotionValue(Infinity),
-    (val: number) => {
-      const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-      return val - bounds.x - bounds.width / 2;
-    }
-  );
+  const distanceCalc = useTransform(mouseX, (val: number) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+    return val - bounds.x - bounds.width / 2;
+  });
 
   const widthSync = useTransform(
     distanceCalc,
@@ -123,7 +121,7 @@ const DockIcon = ({
       ref={ref}
       style={{ width }}
       className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center h-full px-2rounded-[50px] hover:bg-none hover:text-gray-600",
+        "flex aspect-square cursor-pointer items-center justify-center h-full px-2 rounded-[50px] hover:bg-none hover:text-gray-600",
         className
       )}
       {...props}
