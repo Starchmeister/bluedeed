@@ -134,7 +134,7 @@ export default function AboutPage() {
               <h4 className="text-[32px] tracking-[-2px] font-medium">
                 Wireframing
               </h4>
-              <p>
+              <p className="text-[13px]">
                 Before diving into design, we start with wireframes to lay out
                 the structure and flow of your project. This step helps
                 visualize the user experience and ensures that all elements are
@@ -150,7 +150,7 @@ export default function AboutPage() {
               <h4 className="text-[32px] tracking-[-2px] font-medium">
                 Designing
               </h4>
-              <p>
+              <p className="text-[13px]">
                 Once the wireframes are approved, we move on to the design
                 phase, where creativity meets functionality. Our team crafts
                 visually compelling and user-centric designs that not only look
@@ -166,7 +166,7 @@ export default function AboutPage() {
               <h4 className="text-[32px] tracking-[-2px] font-medium">
                 Development
               </h4>
-              <p>
+              <p className="text-[13px]">
                 With the design finalized, our development team brings
                 everything to life. Using the latest technologies and best
                 practices, we build responsive, high-performance solutions that
